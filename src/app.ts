@@ -4,12 +4,15 @@ import express from "express";
  * A factory function that configurates Express application and return an
  * Express instance.
  *
- * @returns {express.Application} app
  */
-const createApp = () => {
+const createApp = (): express.Application => {
     const app = express();
 
-    app.get("/", (req, res) => {
+    // Configure express middleware
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: true }));
+
+    app.get("/", (_req, res) => {
         res.send("Hello World");
     });
 
