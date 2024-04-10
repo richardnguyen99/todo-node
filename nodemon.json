@@ -1,0 +1,18 @@
+{
+    "verbose": true,
+    "ignore": [
+        "node_modules",
+        "public",
+        "dist",
+        "**/*.test.js",
+        "**/*.spec.js"
+    ],
+    "watch": [
+        "src"
+    ],
+    "ext": "ts,json",
+    "exec": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "execMap": {
+        "ts-node-dev": "node_modules/.bin/ts-node-dev"
+    }
+}
