@@ -1,13 +1,22 @@
 import express from "express";
 
-const createApp = () => {
-  const app = express();
+/**
+ * A factory function that configurates Express application and return an
+ * Express instance.
+ *
+ */
+const createApp = (): express.Application => {
+    const app = express();
 
-  app.get("/", (req, res) => {
-    res.send("Hello World");
-  });
+    // Configure express middleware
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: true }));
 
-  return app;
+    app.get("/", (_req, res) => {
+        res.send("Hello World");
+    });
+
+    return app;
 };
 
 export default createApp;
