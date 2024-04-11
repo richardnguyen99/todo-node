@@ -1,2 +1,55 @@
-footer.footer
-    p © 2024 My Website
+footer.footer.py-5.mt-5.bg-light
+    .container
+        .row
+            .col-lg-4
+                a.h5.d-flex.gap-2.align-items-center.mb-3(href="/")
+                    img.d-inline-block.rounded-3(
+                        src="/favicon-32x32.png",
+                        width="32",
+                        height="32",
+                        alt="Todo-Node"
+                    )
+                    p.mb-0 ToDo-Node
+
+                p.text-muted
+                    | A simple todo app built with Node.js, Express, and Pug.
+
+            .row.col-lg-8
+                .ms-lg-auto.col-sm-6.col-lg-4
+                    h5.mb-3.text-lg-end Links
+                    ul.list-unstyled.text-small.float-lg-end
+                        li
+                            a(href="/") Home
+                        li
+                            a(href="/todos") Todos
+                        li
+                            a(href="/about") About
+
+                .col-sm-6.col-lg-4
+                    h5.mb-3.text-lg-end Contact
+                    ul.list-unstyled.text-small.float-lg-end
+                        li
+                            a(href="#") GitHub
+
+        .row.mt-4.pt-4.border-top
+            .col-lg-4
+                p.text-muted.mb-0
+                    | &copy; 2024 Todo-Node. All rights reserved.
+
+            .col-lg-4.text-center
+                p.text-muted.mb-0
+                    | Built with&nbsp;
+                    a(href="https://nodejs.org/") Node.js
+                    | ,&nbsp;
+                    a(href="https://expressjs.com/") Express
+                    | , and&nbsp;
+                    a(href="https://pugjs.org/") Pug
+                    | .
+
+            .col-lg-4.text-end
+                p.text-muted.mb-0
+                    | Powered by&nbsp;
+                    a(href="https://www.digitalocean.com/") Digital Ocean
+                    | &nbsp;and&nbsp;
+                    a(href="https://www.cloudflare.com/") Cloudflare
+                    | .

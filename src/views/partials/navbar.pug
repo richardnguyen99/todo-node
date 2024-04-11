@@ -1,5 +1,77 @@
-nav.navbar
-    ul
-        li: a(href="/") Home
-        li: a(href="/about") About
-        li: a(href="/contact") Contact
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
+    .container
+        <!-- Brand -->
+        a.navbar-brand.d-flex.gap-2(href="/")
+            img.d-inline-block.rounded-3(
+                src="/favicon-32x32.png",
+                width="32",
+                height="32",
+                alt="Todo-Node"
+            )
+            p.mb-0 ToDo-Node
+
+        <!-- Navbar content for large screen -->
+        .d-none.d-lg-flex.container-fluid
+            ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                li.nav-item
+                    a.nav-link.active(href="/") Home
+                li.nav-item
+                    a.nav-link(href="/todos") Todos
+                li.nav-item
+                    a.nav-link(href="/about") About
+            form.d-flex.gap-3
+                input.form-control.bg-.border-dark(
+                    type="search",
+                    placeholder="Search",
+                    aria-label="Search"
+                )
+                button.btn.btn-outline-success(type="submit") Search
+
+        <!-- Navbar menu toggler for small screen -->
+        button.navbar-toggler(
+            type="button",
+            data-bs-toggle="modal",
+            data-bs-target="#navbarModal"
+        )
+            span.navbar-toggler-icon
+
+        <!-- Navbar content for small screen -->
+        #navbarModal.modal.fade(
+            tabindex="-1",
+            aria-labelledby="navbarModalLabel",
+            aria-hidden="true"
+        )
+            .modal-dialog.modal-xl(style="min-width: 95%")
+                .modal-content
+                    .modal-header
+                        h5#navbarModalLabel.modal-title.d-flex.gap-2
+                            img.d-inline-block.rounded-3(
+                                src="/favicon-32x32.png",
+                                width="32",
+                                height="32",
+                                alt="Todo-Node"
+                            )
+                            p.mb-0 ToDo-Node
+                        button.btn-close(
+                            type="button",
+                            data-bs-dismiss="modal",
+                            aria-label="Close"
+                        )
+
+                    .modal-body.p-0
+                        ul.nav.flex-column
+                            li.nav-item
+                                a.nav-link.active(href="/") Home
+                            li.nav-item
+                                a.nav-link(href="/todos") Todos
+                            li.nav-item
+                                a.nav-link(href="/about") About
+
+                    .modal-footer
+                        form.d-flex.gap-3.container-fluid.p-0
+                            input.form-control.bg-.border-dark(
+                                type="search",
+                                placeholder="Search",
+                                aria-label="Search"
+                            )
+                            button.btn.btn-outline-success(type="submit") Search
