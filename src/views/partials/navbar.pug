@@ -1,31 +1,34 @@
-nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
+nav.Navbar.navbar.navbar-expand-lg.navbar-dark.sticky-top
     .container
         <!-- Brand -->
-        a.navbar-brand.d-flex.gap-2(href="/")
-            img.d-inline-block.rounded-3(
-                src="/favicon-32x32.png",
+        a.navbar-brand.Navbar__Brand(href="/")
+            img(
+                src="/icon/logo-320x320.png",
                 width="32",
                 height="32",
                 alt="Todo-Node"
             )
-            p.mb-0 ToDo-Node
+            p.mb-0.Navbar-Brand--text todo.node
 
         <!-- Navbar content for large screen -->
-        .d-none.d-lg-flex.container-fluid
-            ul.navbar-nav.me-auto.mb-2.mb-lg-0
-                li.nav-item
-                    a.nav-link.active(href="/") Home
-                li.nav-item
-                    a.nav-link(href="/todos") Todos
-                li.nav-item
-                    a.nav-link(href="/about") About
-            form.d-flex.gap-3
-                input.form-control.bg-.border-dark(
-                    type="search",
-                    placeholder="Search",
-                    aria-label="Search"
-                )
-                button.btn.btn-outline-success(type="submit") Search
+        .d-none.d-lg-flex.container-fluid.justify-content-between
+            ul.Navbar__Nav
+                li.nav-item.Navbar__Nav__Item
+                    a.Navbar__Nav__Link(href="/features") Features
+                li.nav-item.Navbar__Nav__Item
+                    a.Navbar__Nav__Link(href="/todos") Apps
+                li.nav-item.Navbar__Nav__Item
+                    a.Navbar__Nav__Link(href="/about") Help
+
+            ul.Navbar__Nav
+                li.nav-item.Navbar__Nav__Item
+                    a.Navbar__Nav__Link(href="/signin")
+                        | Sign in
+                        i.bi.bi-arrow-right
+                li.Navbar__Nav__Item
+                    a.Navbar__Nav__Button(href="/signup")
+                        | Get started
+                        i.bi.bi-arrow-right
 
         <!-- Navbar menu toggler for small screen -->
         button.navbar-toggler(
@@ -35,43 +38,43 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.sticky-top
         )
             span.navbar-toggler-icon
 
-        <!-- Navbar content for small screen -->
-        #navbarModal.modal.fade(
-            tabindex="-1",
-            aria-labelledby="navbarModalLabel",
-            aria-hidden="true"
-        )
-            .modal-dialog.modal-xl(style="min-width: 95%")
-                .modal-content
-                    .modal-header
-                        h5#navbarModalLabel.modal-title.d-flex.gap-2
-                            img.d-inline-block.rounded-3(
-                                src="/favicon-32x32.png",
-                                width="32",
-                                height="32",
-                                alt="Todo-Node"
-                            )
-                            p.mb-0 ToDo-Node
-                        button.btn-close(
-                            type="button",
-                            data-bs-dismiss="modal",
-                            aria-label="Close"
-                        )
+<!-- Navbar content for small screen -->
+#navbarModal.modal.fade(
+    data-backdrop="false",
+    tabindex="-1",
+    aria-labelledby="navbarModalLabel",
+    aria-hidden="true",
+    style="background-color: rgba(0, 0, 0, 0.5)"
+)
+    .modal-dialog.modal-xl(style="min-width: 95%")
+        .modal-content
+            .modal-header
+                h5#navbarModalLabel.modal-title.d-flex.gap-2
+                    img.d-inline-block.rounded-3(
+                        src="/favicon-32x32.png",
+                        width="32",
+                        height="32",
+                        alt="Todo-Node"
+                    )
+                    p.mb-0 ToDo-Node
+                button.btn-close(
+                    type="button",
+                    data-bs-dismiss="modal",
+                    aria-label="Close"
+                )
 
-                    .modal-body.p-0
-                        ul.nav.flex-column
-                            li.nav-item
-                                a.nav-link.active(href="/") Home
-                            li.nav-item
-                                a.nav-link(href="/todos") Todos
-                            li.nav-item
-                                a.nav-link(href="/about") About
+            .modal-body.p-0
+                ul.nav.flex-column
+                    li.nav-item
+                        a.nav-link.active(href="/") Features
+                    li.nav-item
+                        a.nav-link(href="/todos") Apps
+                    li.nav-item
+                        a.nav-link(href="/about") Help
 
-                    .modal-footer
-                        form.d-flex.gap-3.container-fluid.p-0
-                            input.form-control.bg-.border-dark(
-                                type="search",
-                                placeholder="Search",
-                                aria-label="Search"
-                            )
-                            button.btn.btn-outline-success(type="submit") Search
+            .modal-footer
+                .d-flex.gap-3.container-fluid.p-0
+                    a.btn.btn-dark.rounded-pill(href="/")
+                        | Get Started
+                        i.bi.bi-arrow-right
+                    button.btn.btn-outline-success(type="submit") Search

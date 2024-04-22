@@ -7,5 +7,13 @@ block meta
     )
 
 block content
-    h1 Welcome to ExpressJS
-    p This is a simple ExpressJS application with Pug templating engine.
+    section.container.Hero__Banner
+        .col-12.Hero__Header
+            h1.Hero__Header__Title
+                span Todo app<br>
+                | made for yourself
+            h4.Hero__Header__Description
+                | Manage your tasks with ease<br>
+                | so you can save energy for the big stuff.
+
+            a.Hero__Button(href="/signup") Sign up for free
