@@ -37,9 +37,37 @@ html
 
     body(style="overflow-x: hidden")
         .container
-            .d-flex.align-items-center.justify-content-center
-                .SignIn
-                    include partials/signin-form
+            h1 Registration
+            form(action="/signup", method="POST")
+                .form-group
+                    label(for="username") Username
+                    input#username.form-control(
+                        type="text",
+                        name="username",
+                        required
+                    )
+                .form-group
+                    label(for="email") Email
+                    input#email.form-control(
+                        type="email",
+                        name="email",
+                        required
+                    )
+                .form-group
+                    label(for="password") Password
+                    input#password.form-control(
+                        type="password",
+                        name="password",
+                        required
+                    )
+                .form-group
+                    label(for="confirmPassword") Confirm Password
+                    input#confirmPassword.form-control(
+                        type="password",
+                        name="confirmPassword",
+                        required
+                    )
+                button.btn.btn-primary(type="submit") Register
 
         script(
             src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"
@@ -54,3 +82,4 @@ html
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF",
             crossorigin="anonymous"
         )
+        script(src="./js/register.js")

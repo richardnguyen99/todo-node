@@ -31,7 +31,15 @@ module.exports = {
         /**
          * Basic rules for text editor
          */
-        indent: ["error", 4],
+        indent: [
+            "error",
+            4,
+            {
+                ignoredNodes: [
+                    "ClassBody.body > PropertyDefinition[decorators.length > 0] > .key",
+                ],
+            },
+        ],
         "linebreak-style": ["error", "unix"],
         quotes: ["error", "double"],
         semi: ["error", "always"],
