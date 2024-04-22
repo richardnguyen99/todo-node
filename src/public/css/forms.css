@@ -1,0 +1,9 @@
+.SignIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 412px;
+    min-height: 100vh;
+}
