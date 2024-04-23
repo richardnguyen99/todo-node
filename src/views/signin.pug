@@ -42,7 +42,7 @@ html
                     .card
                         .card-body
                             h1.text-center Sign in
-                            form.signin-form
+                            form#signin-form(action="/signin", method="POST")
                                 .mb-3
                                     label(for="email") Email
                                     input#email.form-control(
@@ -64,6 +64,8 @@ html
                                 .mb-3
                                     a(href="/signup") Create an account
 
+                    #signin-result.d-block.mt-3
+
         include partials/footer
 
         script(
@@ -79,3 +81,4 @@ html
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF",
             crossorigin="anonymous"
         )
+        script(src="/js/signin.js")

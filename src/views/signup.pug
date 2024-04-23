@@ -38,7 +38,7 @@ html
     body(style="overflow-x: hidden")
         .container
             h1 Registration
-            form(action="/signup", method="POST")
+            form#registration-form(action="/signup", method="POST")
                 .form-group
                     label(for="username") Username
                     input#username.form-control(

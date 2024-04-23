@@ -1,12 +1,14 @@
 const registrationForm = document.getElementById("registration-form");
 
+console.log("registrationForm", registrationForm);
+
 registrationForm.addEventListener("submit", (event) => {
     event.preventDefault(); // Prevent default form submission
 
     const formData = new FormData(registrationForm);
     const registrationData = Object.fromEntries(formData);
 
-    fetch("/register", {
+    fetch("/signup", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
