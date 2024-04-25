@@ -1,4 +1,5 @@
 import { DataSource } from "typeorm";
+
 import { User } from "./models/user.entity";
 
 const database: DataSource = new DataSource({

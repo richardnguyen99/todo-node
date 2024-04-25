@@ -61,8 +61,15 @@ html
                                     )
                                 .mb-3
                                     button.btn.btn-primary(type="submit") Sign in
+
                                 .mb-3
                                     a(href="/signup") Create an account
+
+                            .mb-3
+                                a.btn.btn-primary(
+                                    type="submit",
+                                    href="/api/auth/google"
+                                ) Sign in with Google
 
                     #signin-result.d-block.mt-3
 
